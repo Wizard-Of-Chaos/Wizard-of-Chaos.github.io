@@ -24,8 +24,7 @@ This doesn't work for a carrier objective. If I have an alien ship that's spawni
 
 So what's the first thing I need to do? Define some parameters to generate a carrier-killing scenario? Set up the scramble scenario so it finally makes sense? No. The _first_ thing I need to do is make a placeholder model for an enemy ship. To my eternal frustration, once again I will need to open Blender and do something creative.
 
-![alt text][photo1]
-[photo1]: https://github.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/tree/main/imgs/ayycarriercap.png "I swear I'm a better programmer than modeller."
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/ayycarriercap.png "I swear I'm a better programmer than modeller.")
 
 Sure, fine. Modelling isn't really my strength, and any time I'm forced to do it I get annoyed with it. Realistically, once I'm dead certain that the actual game is fine and I don't have to write any serious code, I'm going to go back and give these things a pass, but for now we're all just going to have to suffer through the model equivalent of a sketch. Textures, too.
 
@@ -42,8 +41,7 @@ void setScrambleScenario(Scenario& scenario)
 
 Uh, no, that's... that's it really. The environment is handled elsewhere, and so is the player, so really the only important factor in a scramble is the enemy carrier. Trouble is, this is the exact problem I mentioned at the start: the enemies who spawn in from the carrier are not considered... but scramble scenarios DO work!
 
-![alt text][photo2]
-[photo2]: https://github.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/tree/main/imgs/ingameayycarrier.png "'Is that a Romulan ship?' my friend asks me."
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/ingameayycarrier.png "'Is that a Romulan ship?' my friend asks me.")
 
 ---
 
