@@ -75,4 +75,4 @@ You see it, right? There's a very, very simple and silly bug causing it to break
 
 ---
 
-What's next? Updated scenarios. Right now it's just shooting a whole bunch of hostiles and I want to expand on that a little more.
+What's next? Updated scenarios. Right now it's just shooting a whole bunch of hostiles and I want to expand on that a little more. Obviously I'm going to want more weapons and ships eventually, but those are expansion problems (the systems for them already exist, I just need more specific types and extra components for them), whereas scenario updates are more specific and will require a bit more of an implementation.
