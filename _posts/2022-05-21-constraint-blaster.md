@@ -51,7 +51,7 @@ My new features call a function to track the entities involved on impact. I also
 
 This is about when I decided to look into the Bullet3 docs to see what kind of constraints were available, and made the unsurprising discovery that the docs were almost completely unhelpful. Bullet3's docs are very extensive, but include very few comments on just what the hell a function actually does.
 
-Squinting my eyes and cursing the developers who wrote them (and making a mental note to go contribute to the bullet repo to add some goddamned documentation myself), I decided on a simple Point-to-Point constraint, since it _sounded_ like what I wanted It was... _sort_ of.
+Squinting my eyes and cursing the developers who wrote them (and making a mental note to go contribute to the bullet repo to add some goddamned documentation myself), I decided on a simple Point-to-Point constraint, since it _sounded_ like what I wanted It was... _sort_ of. Click the image for the video:
 
 [![video](https://img.youtube.com/vi/EvTifiuylEI/maxresdefault.jpg)](https://youtu.be/EvTifiuylEI)
 
