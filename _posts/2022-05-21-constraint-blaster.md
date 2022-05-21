@@ -53,18 +53,18 @@ This is about when I decided to look into the Bullet3 docs to see what kind of c
 
 Squinting my eyes and cursing the developers who wrote them (and making a mental note to go contribute to the bullet repo to add some goddamned documentation myself), I decided on a simple Point-to-Point constraint, since it _sounded_ like what I wanted It was... _sort_ of.
 
-https://user-images.githubusercontent.com/59537242/169669236-8a74380c-b775-43e8-b32e-809b78183ab2.mp4
+[![video](https://img.youtube.com/vi/EvTifiuylEI/maxresdefault.jpg)](https://youtu.be/EvTifiuylEI)
 
 It works! I mean, it was completely weak and ineffectual, but it _did_ work. Turns out point to point constraints aren't all that great with variable masses - they're much better suited for something like, say, the links of a bridge. Yanking a large asteroid towards a tiny ship doesn't work all that well. In this case, the AI was actually _stronger_ than the constraint; it barely moved at all because it was issuing a thrust to keep itself still due to its idle state. That said, I did know I was on the right track, and was shocked that it worked without anything breaking.
 
 After some cursory googling and looking around, I wasn't able to figure out any good way to increase the strength of a p2p constraint without getting hacky about it (although I'm sure _someone_ reading this knows a better way). I figured that a 6 Degrees of Freedom constraint was more what I was looking for, which was a more complicated constraint that also worked for restricting rotational values. I don't care about that, but I _do_ care about the increased flexibility and possibility for adjustment, so I implemented one of those as my constraint instead.
 
-https://user-images.githubusercontent.com/59537242/169669245-9296619e-c09e-4c69-b8bb-d8814f849be3.mp4
+[![video](https://img.youtube.com/vi/VYJkj9T0pVI/maxresdefault.jpg)](https://youtu.be/VYJkj9T0pVI)
 
 Hahahahahahahahahahaha!
 
 As incredibly entertaining as that was (I spent a solid ten minutes just duct-taping the AI to various obstacles), this is clearly not the most balanced it could be. This strength immediately yanked the two objects together as quickly as possible, instantly demolishing whatever the hell got in the way and the objects themselves due to the impact damage. Funny as it is, this needs a bit more nuance to it.
 
-https://user-images.githubusercontent.com/59537242/169669259-956e5090-5054-4782-89c2-4ebbbe9c1239.mp4
+[![video](https://img.youtube.com/vi/RmAmpRv8aUE/maxresdefault.jpg)](https://youtu.be/RmAmpRv8aUE)
 
 This is much closer to what I'm looking for. I eventually damped it even more, since this was still a little quick for my tastes, but the basic concept works and it's very fun to send AI ships smacking into each other or whatever the hell happens to be nearby. I think my favorite was causing two asteroids to smack into each other behind me, crushing the ship tailing me like a beer can. I also tested this out with a carrier and had a blast setting up the forces between a carrier and the nearby debris. That was much more fun than just shooting it a bunch till it dies. There will probably be a few more balance iterations, but I think the gravity bolas is here to stay.
