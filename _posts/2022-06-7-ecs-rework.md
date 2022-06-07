@@ -85,13 +85,13 @@ EntityId getPlayer()
 Hahahaha, oh wait, no, I *did* have a function to get the player entity! It, too, was a system! Well, at least it's *consistent.* Except for the part where I didn't use this function.
 
 ```cpp
-		auto particles = scene.get<ShipParticleComponent>(entityId); //need to check to make sure this exists
+auto particles = scene.get<ShipParticleComponent>(entityId); //need to check to make sure this exists
 ```
 
 I never checked to make sure it exists.
 
 ```cpp
-			it = gameController->sounds.erase(it); //I want to re-work the std library so instead of "erase" it's "whip". Whip it! Whip it good!
+it = gameController->sounds.erase(it); //I want to re-work the std library so instead of "erase" it's "whip". Whip it! Whip it good!
 ```
 
 I think I was drunk when that comment was written.
