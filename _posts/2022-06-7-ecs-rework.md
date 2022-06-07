@@ -72,7 +72,7 @@ Another chunk of really silly logic. This got ran on every key event; it would i
 
 The silly part here is... the input component was only ever on the one entity: the player. There's no need for a loop here. There's no need for *anything* except a cached ID. My only defense here is that I was in the throes of ECS worship at the time and wanted to make *everything* a system... even things that only ran *once.*
 
-```
+```cpp
 EntityId getPlayer()
 {
 	for (auto id : SceneView<PlayerComponent, IrrlichtComponent>(sceneManager->scene)) {
