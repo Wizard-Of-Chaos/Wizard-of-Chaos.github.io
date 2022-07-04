@@ -21,6 +21,6 @@ I have seen the future, and it is a cold beer and a nice sit-down, and some Star
 
 After that I'm going to fix carriers and then get cracking on more scenario work. My esteemed partner will be working on networking code to see if we can get co-op running. Specifically I'm going to take a look at environment generation to improve it a bit, and maybe adding some more complicated objectives to work with. Once I've done some work there to make sure it's extensible. Some more alien ship designs wouldn't hurt, either, and I'd like to see if I can randomize the alien guns and ships so it's not all so goddamned same-y.
 
-![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/construction.png "This button has been on the scenario screen for months. It's had it too good for too long."
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/construction.png "This button has been on the scenario screen for months. It's had it too good for too long.")
 
 Once I've looked at that, I'm going to decide what to do with this button. Ideally I'd like a system where you can break down weapons and ammo and turn them into scrap for different weapons, ships, whatever. Then probably boss fights after that... but that might be a ways off. We're getting there. I'm Dr. Rodney McKay up in this house. Everything is doable.
