@@ -42,7 +42,6 @@ Well... at the present moment... kinda? The entire game presently takes up maybe
 
 ---
 ### So why bother with this now?
-
 Because I had most of this in place already, but sounds were poorly handled. Because of how flecs shuffles entities and components around in memory I kept running into errors when I simply stored a pointer to a sound source as part of the weapon info component - say, the firing noise. However, my asset management system was built for loading in stuff at the *start* of a scenario, and was inefficient for doing it on the fly, and moreover had no specific functions for making sure I could grab the appropriate sound for a *specific* weapon. It has all this now, and my bullets go BLAM and my lasers go PEW and my impulse blaster goes THOOM.
 
 Besides, this crap needed a rewrite eventually. Might as well do it now when it's less of an issue as opposed to later when it's horribly entrenched.
