@@ -57,6 +57,6 @@ I've kept the particles here (for now), but also added a small sphere that expan
 
 In addition to this, many of the present sound effects were made by doing little "pew!" noises with my mouth into a headset mic. This has been rectified and the guns no longer sound like they have a learning disability. Many thanks to the dude helping me with sound design. Check out their stuff here: https://what.bandcamp.com/
 
-###Next up
+### Next up
 
 Scenario work. The generation functions have had it too good for too long. I need to expand the scenarios to involve more flying, trickier obstacles, and different *types* of obstacles. My esteemed partner, meanwhile, will get cracking on serialization for our networking challenges.
