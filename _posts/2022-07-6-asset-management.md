@@ -35,15 +35,21 @@ What happens when I shoot everyone in sight and finish the scenario, though? I m
 
 What I have to do is keep track of this stuff myself and tie it to a specific identifier for... well, whatever is using it. In the case of my Tuxedo ship, maybe that's just the string "Tuxedo". So what I've done is I've written an asset manager for just this sort of thing. Now, when I load a specific texture for a ship, I can load it as normal, but I'll also track it in my asset manager. Then, every time the game closes, I can flip through all the assets I've loaded for that scenario and take them out of memory.
 
-###Was this a good use of my time? 
+---
+### Was this a good use of my time? 
+
 Well... at the present moment... kinda? The entire game presently takes up maybe ~50 MB of disk space. If I loaded every single asset I had into memory and kept it there, it would eat up about ~40 MB. When I run a scenario, that eats up maybe ~600 MB - most of which is managing the actual *entities themselves,* which got deleted *anyway* when the scenario ended. So I've effectively made sure to be able to save myself 40 MB at the present moment. However, as I keep adding assets for use (and hopefully improving on existing ones), that number is going to keep going up, so hopefully I won't have any leaked memory in the future. Or at least, *less.*
 
-###So why bother with this now?
+---
+### So why bother with this now?
+
 Because I had most of this in place already, but sounds were poorly handled. Because of how flecs shuffles entities and components around in memory I kept running into errors when I simply stored a pointer to a sound source as part of the weapon info component - say, the firing noise. However, my asset management system was built for loading in stuff at the *start* of a scenario, and was inefficient for doing it on the fly, and moreover had no specific functions for making sure I could grab the appropriate sound for a *specific* weapon. It has all this now, and my bullets go BLAM and my lasers go PEW and my impulse blaster goes THOOM.
 
 Besides, this crap needed a rewrite eventually. Might as well do it now when it's less of an issue as opposed to later when it's horribly entrenched.
 
-###Other additions
+---
+### Other additions
+
 Besides pissing away time on fixing problems for my future self, I also slightly re-worked explosions. Previously, the system for explosions was just an emitter that spewed a generic particle effect. The effect faded over time before removing itself from existence. This was quite bad at showing how big the radius of an explosion was or even really portraying an explosion in general. What it needed was a sense of volume.
 
 ![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/newexplosion.gif "Ka-BANG!")
