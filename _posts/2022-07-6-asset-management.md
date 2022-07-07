@@ -50,7 +50,7 @@ Besides pissing away time on fixing problems for my future self, I also slightly
 
 I've kept the particles here (for now), but also added a small sphere that expands outward and gradually disappears as the explosion goes onward. I can make the textures on the sphere more interesting (and add more particle stuff later), but this is much closer to what I want in terms of demonstrating how close you should get to things blowing up.
 
-In addition to this, many of the present sound effects were made by doing little "pew!" noises with my mouth into a headset mic. This has been rectified and the guns no longer sound like they have a learning disability. Many thanks to the dude helping me with sound design. Check out his stuff here: https://what.bandcamp.com/
+In addition to this, many of the present sound effects were made by doing little "pew!" noises with my mouth into a headset mic. This has been rectified and the guns no longer sound like they have a learning disability. Many thanks to the dude helping me with sound design. Check out their stuff here: https://what.bandcamp.com/
 
 ###Next up
 
