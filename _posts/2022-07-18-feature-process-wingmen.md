@@ -19,7 +19,7 @@ It was at this point that I procrastinated for a day or so because I fucking hat
 
 Eventually I got a handle on my pique and set it up so it looked roughly the way I planned it.
 
-![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/wingmanuisketch.png "All glory to the UI assets I made ahead of time.")
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/wingmanuidesign.png "All glory to the UI assets I made ahead of time.")
 
 At this point none of the buttons work and it's all effectively placeholder stuff. This was the point at which I needed to decide how wingmen and ship instances relate to each other and get stored. Obviously, what I want here is to have the "wingman" structure relate to the "ship" structure in some capacity, and I want to be able to change that on the fly. I spent another day puzzling this out and re-working the storage of specific wingman / ship instance things in order to get what I want, and noted a few places that I really need to just rewire the campaign structure along the way.
 
