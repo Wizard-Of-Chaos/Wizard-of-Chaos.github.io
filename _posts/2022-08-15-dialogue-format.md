@@ -1,4 +1,4 @@
-##Dialogue Format: Constructing a Dialogue System
+## Dialogue Format: Constructing a Dialogue System
 
 With the campaign rework out of the way and some work done on sector management (at present, the game generates the debris and asteroid sectors one after the other with a carrier battle as a bossfight ending each sector), there's a few other pieces of tech I need to get written. I'm trying to focus on making just one sector at a time so I can extend and tweak it later with future sectors - and what that means is in order to get it done *properly* I need all my systems up and ready to go. I also need to rework my audio, which is going to be the rest of this week (and probably the next - switching to OpenAL is going to be involved), but first I decided to take a swing at a dialogue system.
 
@@ -45,5 +45,6 @@ So I wrote out a format where trees store nodes which store choices and all thei
 
 This is a quick and easy structure for getting a dialogue system set up for arbitrary usage, where all you care about is the choices associated with it and the text. You could easily add in extra hooks to associate sound files with each node if you have voiced dialogue (I don't). Getting this dead-on on the first try has swelled my ego to unsustainable proportions. I am reminded of the ending of an Asimov short story (The Feeling of Power), although with code structures rather than basic math.
 
-> > Nine times seven, thought Shuman with deep satisfaction, is sixty-three, and I don't need a computer to tell me so. The computer is in my own head.
-> > And it was amazing the feeling of power that gave him.
+> Nine times seven, thought Shuman with deep satisfaction, is sixty-three, and I don't need a computer to tell me so. The computer is in my own head.
+
+> And it was amazing the feeling of power that gave him.
