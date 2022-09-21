@@ -42,7 +42,7 @@ Steven Mitchell is your personal gopher and relays orders around the ship. His p
 
 There's another NPC that will be on this screen too, your comms officer, who will answer more specific questions about scenarios and orders, but I haven't drawn her yet or written her dialogue.
 
-#Takeaways
+### Takeaways
 
 The thing to note with all of these menus is that there's a lot compressed into a fairly small space with the buttons attempting to be as easy to understand as possible. In my opinion, the purpose of a UI is to get the hell out of the user's way. I've endeavored to provide a bunch of information for as little work as I possibly can. So far I'm pretty happy with the results.
 
