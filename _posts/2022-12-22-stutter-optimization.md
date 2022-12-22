@@ -38,7 +38,7 @@ Gunships are just big damn ships that move at regular speeds but have turrets, m
 
 ## Extra Dialogue
 
-![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/arnoldchat.png "Arnold!")
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/arnoldchat.jpg "Arnold!")
 
 Writing dialogue is *haaaaaaard*. I've complained about it before, and I'm gonna do it again. My esteemed writing partner and I have been hard at work on this crap, and it just sucks the life out of you super fast. 
 
