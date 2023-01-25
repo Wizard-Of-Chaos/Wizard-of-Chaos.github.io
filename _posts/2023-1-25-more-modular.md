@@ -31,7 +31,7 @@ vector3df rot(180,0,0);
 
 So this is where we want to throw the basic module. Cool. My basic module here is an "X" shaped reactor module.
 
-[alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/reactorblender.png "Stolen from last post")
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/reactorblender.png "Stolen from last post")
 
 As I explained [last time](https://wizard-of-chaos.github.io/2023/01/08/modular-stations.html), in order to be able to attach things to this sucker correctly, we need to know what direction any module attached to it is facing, and we need to know where the attachment point is.
 
