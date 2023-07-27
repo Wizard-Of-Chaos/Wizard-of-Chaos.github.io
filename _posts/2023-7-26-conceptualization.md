@@ -4,7 +4,7 @@ Work continues on making the game actually look good, including new and fun menu
 
 Most recently it's been the loadout screen. I still haven't shuffled the buttons exactly where I'd like them, but the background is excellent.
 
-![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/loadoutscreen.png "My god! Actual shade!")
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/loadoutScreen.png "My god! Actual shade!")
 
 On top of that, the map screen also got a facelift.
 
