@@ -12,7 +12,9 @@ I'm not entirely happy with the look of the dust clouds right now (too bright, t
 
 ![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/dust_cloud_wip.png "Not great, not terrible")
 
-I'll figure it out -- probably by either writing a cloud shader or mixing these two concepts. In any case, the asteroids and constant movement means it's *much* more likely to hit a rock, and much more likely for the AI to hit a rock. Unfortunately my obstacle avoidance code was... half baked, shall we say, written around last April and not updated or tweaked since then. After losing wingman after wingman to avoidable collisions I realized I needed to just rewrite the damn thing. Proper collision detection and avoidance requires a few concepts, though.
+I'll figure it out -- probably by either writing a cloud shader or mixing these two concepts. In any case, the asteroids and constant movement means it's *much* more likely to hit a rock, and much more likely for the AI to hit a rock. Unfortunately my obstacle avoidance code was pretty bad, written around last April and not updated or tweaked since then -- it was able to detect basic collisions, but ships had this frustrating habit of stopping just short of the obstacle and simply *staying* there, which on a *moving* object meant they just got crushed like beer cans. After losing wingman after wingman to avoidable collisions I realized I needed to just rewrite the damn thing. 
+
+Proper collision detection and avoidance requires a few concepts, though. Thankfully [Bullet3](https://pybullet.org/wordpress/), the physics library I'm using, already wrote most of them for me, and I needed to figure out how to apply the various tools it has into a spaceship game.
 
 ## Detection
 
@@ -24,7 +26,7 @@ But if I'm *driving* down the road, collisions become much more likely.
 
 In this case I have somewhere I'm trying to get and I have my own forward velocity to work off of. In either case, I have a *path* for myself -- the straight line between my current position, and either the place I'm trying to get or where I'm going to be in, say, five seconds based on my current velocity. Now I just need to find out if there's something *on* that path -- but how can I check that?
 
-One possible method, to go back to our car metaphor, is to get an inflatable beach ball and hurl it out in front of us as we're driving. If the ball bounces off of something, we're about to collide with whatever it bounced off of, and we should brake or swerve. This is such a common use-case for physics that Bullet3 [has this feature already built in.](https://pybullet.org/Bullet/BulletFull/classbtClosestNotMeConvexResultCallback.html)
+One possible method, to go back to our car metaphor, is to get an inflatable beach ball and hurl it out in front of us as we're driving. If the ball bounces off of something, we're about to collide with whatever it bounced off of, and we should brake or swerve. I wouldn't recommend doing this in an actual car, but for a computer simulation this is pretty much how it gets done. This is such a common use-case for physics that Bullet3 [has this feature already built in.](https://pybullet.org/Bullet/BulletFull/classbtClosestNotMeConvexResultCallback.html)
 
 ```cpp
 const btCollisionObject* obstacleOnPath(btRigidBody* rb, const btVector3& target)
@@ -46,13 +48,19 @@ const btCollisionObject* obstacleOnPath(btRigidBody* rb, const btVector3& target
 }
 ```
 
+In this case it's the btClosestNotMeConvexResultCallback, which is exactly what it says on the tin -- it throws a convex shape down the line I give it, and assuming it hits something that isn't "me" (in this case, the starting object) it'll return whatever it hit so I can look at it further.
+
 We're going to be running these functions several times a second, so we don't want to use the actual collision object we have for the rigid body -- we want to save that for *actual* questions. In this case, all we need is a rough approximation of what's in front of us, and we can get that with a sphere. The way to determine if something hits a sphere is incredibly easy -- just check if you're within the radius of the sphere -- so we use that for speed reasons.
 
 We throw our virtual sphere down the line we've specified with "from" and "to" and see if there's something in the way. If there is, congrats! You're about to become the proud owner of a car accident. The question then becomes, how do we avoid the object?
 
 ## Avoidance
 
-We now know that we're about to hit something, and the question becomes what do we do to get out of the way. This actually gave me some mental trouble trying to define it. You need some way to define the *edge* of the object in question, and to do it quickly without a lot of checks. In this case, I'm going to want an [axis-aligned bounding box](https://en.wikipedia.org/wiki/Bounding_volume). This is a very simple method to determine just where the edges of the object even are in a very rough sense, and is typically used for broad-phase collision checks (where you determine if objects are even close to one another before getting down to more serious collision checks). Once again, Bullet3 comes with a method built-in to get me this thing.
+We now know that we're about to hit something, and the question becomes what do we do to get out of the way. This actually gave me some mental trouble trying to define it. You need some way to define the *edge* of the object in question, and to do it quickly without a lot of checks. In this case, I'm going to want an [axis-aligned bounding box](https://en.wikipedia.org/wiki/Bounding_volume). 
+
+If you're not aware of what one of these things is, let me put it this way: I'm six feet tall, a bit under two feet wide and about a half foot thick. My personal bounding box if I'm standing upright is a rectangular prism that has those dimensions. If I reach out my arms in front of me, however, my bounding box changes: I'm now about six feet tall, a bit under two feet wide, and about three or four feet thick. The box then changes for those dimensions. The wikipedia article has a great picture if you're having trouble visualizing this.
+
+This is a very simple method to determine just where the edges of the object even are in a very rough sense, and is typically used for broad-phase collision checks (where you determine if objects are even close to one another before getting down to more serious collision checks). Once again, Bullet3 comes with a method built-in to get me this thing.
 
 ![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/getaabb.png "Thank god I don't have to write this crap myself.")
 
