@@ -112,6 +112,8 @@ The audio sources keep track of a given source and its present values, and can p
 
 Overall this process was much less of a headache than I expected it to be; normally tearing out libraries and implementing new ones is a giant pain in the ass that takes way more time than I expect, but in this case it actually took *less* time than I expected and I got a lot more functionality out of it. I *will* be releasing my basic audio driver as its own library in the future; it might take a second to generic-ify it to make sure that it'll work as expected, but it should have some relatively simple functions for anyone looking to use this library.
 
+> UPDATE 9/10/2023: Great news! You now totally can [use this wrapper for your own projects](https://github.com/Wizard-Of-Chaos/Baeds_OpenALWrapper).
+
 ### What's next?
 
 More GUI work. More campaign work. Setting up GUI to go with the dialogue system. Writing out the construction bay mechanics and the associated dialogue. A whole bunch of really dull work, really. Bleagh. 
