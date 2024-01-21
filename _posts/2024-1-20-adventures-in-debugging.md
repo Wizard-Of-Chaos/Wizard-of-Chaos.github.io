@@ -1,8 +1,6 @@
 ### Adventures in Debugging
 
-First, let's get something extremely important out of the way:
-
-https://store.steampowered.com/app/2510820/Extermination_Shock/
+First, let's get something extremely important out of the way: [This is a really cool link!](https://store.steampowered.com/app/2510820/Extermination_Shock/)
 
 Okay? Okay. It's up on Steam! We even have a trailer! Woohoo! Release sometime in March or June, depending on my own general competence with debugging and some other factors. This month has been a hell of a lot of that; I got the Steam page up pretty much as soon as I was capable of finishing the game in a single sitting (not that I, y'know, did, because it would take me about ten hours), and it's *already out of date* because I've been fixing and adding crap like a madman.
 
