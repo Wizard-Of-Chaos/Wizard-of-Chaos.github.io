@@ -41,7 +41,7 @@ Except... wait. This doesn't work either. What if I get a GUI event that also co
 
 ## Denial, Anger, and Depression
 
-Clearly, I need some extra detail in how I register these damn callbacks to elements to determine what type of events get tossed their way. But the function for `guiController->setCallback()` is used literally everywhere I have any kind of GUI at all. I don't wanna mess with that thing, it's a complete pain. But what I *can* do is a half-assed rework known as default parameters. Fun fact: literally every time you see a default parameter written in C/C++ code, this is why it exists -- because some god damn developer was lazy and didn't want to rewrite a function properly^(citation needed)^.
+Clearly, I need some extra detail in how I register these damn callbacks to elements to determine what type of events get tossed their way. But the function for `guiController->setCallback()` is used literally everywhere I have any kind of GUI at all. I don't wanna mess with that thing, it's a complete pain. But what I *can* do is a half-assed rework known as default parameters. Fun fact: literally every time you see a default parameter written in C/C++ code, this is why it exists -- because some god damn developer was lazy and didn't want to rewrite a function properly<sup>(citation needed)</sup>.
 
 The events don't work as a bitmask themselves, so I need an additional enum to flag this stuff.
 
