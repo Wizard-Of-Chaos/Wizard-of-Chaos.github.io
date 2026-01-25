@@ -76,7 +76,7 @@ Of course, now we should determine whether or not it reflects light *at all* -- 
 
 The roughness portion of a texture determines how the same highlights look and whether they appear at all. A very rough surface (like my aforementioned cast-iron pan) might have a very spread-out reflection, but a very smooth surface would reflect the little circle of the sun perfectly. This interacts with the metallic part above, since both deal with reflections. It's also usually handled by a number between 0 and 1, where 0 is "not rough at all, very sharp reflections" and 1 is "extremely rough, very broad and washed out reflections".
 
-![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/materialmaker_metallic.png "Oh god, it's too shiny!")
+![alt text](https://raw.githubusercontent.com/Wizard-Of-Chaos/Wizard-of-Chaos.github.io/main/imgs/materialmaker_roughness.png "Oh god, it's too shiny!")
 
 I turned down the roughness on this to exaggerate the effect. Note the much clearer reflections coming off it compared to the previous photo. When turned back up, it looks like the previous photo -- much broader and blended together.
 
